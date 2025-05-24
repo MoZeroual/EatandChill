@@ -64,7 +64,7 @@ h1 {
 }
 
 .nav-links li a:hover {
-    color: red;
+    color: #2ca02c;
 }
 
 /* Barre de recherche */
@@ -91,7 +91,7 @@ h1 {
 }
 
 .search-form button:hover {
-    background-color: red;
+    background-color: #2ca02c;
 }
 
 /* --- Footer --- */
@@ -133,7 +133,7 @@ footer {
 }
 
 .already-registered a {
-    color:red;
+    color : #2ca02c;
     text-decoration: none;
     font-weight: 600;
 }
@@ -215,7 +215,7 @@ footer {
 }
 
 .form-inscription button:hover {
-    background-color: red;
+    background-color: #2ca02c;
     ;
 }
 
