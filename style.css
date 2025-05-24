@@ -220,3 +220,46 @@ footer {
 }
 
 
+/*css page connexion*/
+.form-connexion label {
+    display: block;
+    margin-bottom: 0px;
+    font-weight: 600;
+}
+
+.form-connexion input {
+    width: 100%;
+    padding: 8px 10px;
+    margin-bottom: 18px;
+    border: 1.5px solid #0b3d0b;
+    border-radius: 5px;
+    font-size: 1rem;
+    color: #0b3d0b;
+    background-color: #ffffff;
+    transition: border-color 0.3s;
+}
+
+.form-connexion input:focus {
+    border-color: #2ca02c;
+    outline: none;
+}
+
+.form-connexion button {
+    display: inline;
+    width: 100%;
+    padding: 12px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    background-color: #0b3d0b;
+    color: #ffffff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.form-connexion button:hover {
+    background-color: #2ca02c;
+}
+
+
