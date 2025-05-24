@@ -1,0 +1,13 @@
+BD Eat and chill :
+
+
+1/ Users :
+	idu
+	nomComplet
+	pseudo
+	telephone
+	email
+	mot de passe
+	ville
+	annee de naissance
+	

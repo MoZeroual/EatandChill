@@ -1,0 +1,222 @@
+/* Reset simple */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #ffffff; /* blanc */
+    color: #0b3d0b; /* vert foncé */
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.container {
+    background-color: #e6f2e6; /* vert très clair */
+    border: 2px solid #0b3d0b; /* vert foncé */
+    border-radius: 10px;
+    padding: 30px 40px;
+    max-width: 1000px;
+    margin: 40px auto;
+    box-shadow: 0 0 10px rgba(0,0,0,0.15); /* un peu de noir */
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 25px;
+    font-weight: 700;
+    color: #0b3d0b;
+}
+
+
+
+/* --- Navbar --- */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #0b3d0b;
+    padding: 12px 20px;
+    color: white;
+    flex-wrap: wrap;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+.nav-links li a:hover {
+    color: red;
+}
+
+/* Barre de recherche */
+.search-form {
+    display: flex;
+    align-items: center;
+}
+
+.search-form input[type="search"] {
+    padding: 6px 10px;
+    border-radius: 4px 0 0 4px;
+    border: none;
+    font-size: 1rem;
+}
+
+.search-form button {
+    padding: 6px 10px;
+    background-color: #2ca02c;
+    border: none;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+    color: white;
+    font-size: 1rem;
+}
+
+.search-form button:hover {
+    background-color: red;
+}
+
+/* --- Footer --- */
+footer {
+    background-color: #0b3d0b;
+    color: white;
+    text-align: center;
+    padding: 20px 15px;
+    font-size: 0.9rem;
+    line-height: 2;
+    margin-top: auto;
+}
+
+/* Responsive pour navbar */
+@media (max-width: 600px) {
+    .navbar {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .nav-links {
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+    }
+    .search-form {
+        width: 100%;
+    }
+    .search-form input[type="search"] {
+        flex-grow: 1;
+    }
+}
+
+
+.already-registered {
+    margin-top: 15px;
+    font-size: 0.95rem;
+    color: #0b3d0b;
+    text-align: center;
+}
+
+.already-registered a {
+    color:red;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.already-registered a:hover {
+    text-decoration: underline;
+}
+.password-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.password-wrapper input {
+  width: 100%;
+  padding-right: 35px; /* assez pour le bouton à droite */
+  box-sizing: border-box;
+}
+
+.password-wrapper .toggle-btn {
+    display: block;
+  position: absolute;
+  right: 10px;      /* collé à droite */
+  top: 50%;
+  transform: translateY(-50%);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  line-height: 1;
+  /*padding-left: 97%;
+  padding-bottom: 3%;*/
+  margin-left: 95%;
+  margin-bottom: 50%;
+
+  user-select: none;
+  color: #2ca02c;
+}
+
+.password-wrapper .toggle-btn:hover {
+  color: #1e7a1e;
+}
+
+
+.form-inscription label {
+    display: block;
+    margin-bottom: 0 px;
+    font-weight: 600;
+}
+
+.form-inscription input {
+    width: 100%;
+    padding: 8px 10px;
+    margin-bottom: 18px;
+    border: 1.5px solid #0b3d0b;
+    border-radius: 5px;
+    font-size: 1rem;
+    color: #0b3d0b;
+    background-color: #ffffff;
+    transition: border-color 0.3s;
+}
+
+.form-inscription input:focus {
+    border-color: #2ca02c;
+    outline: none;
+}
+
+.form-inscription button {
+    display: inline;
+    width: 100%;
+    padding: 12px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    background-color: #0b3d0b;
+    color: #ffffff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.form-inscription button:hover {
+    background-color: red;
+    ;
+}
+
+
