@@ -27,6 +27,11 @@
 <main>
     <div class="container">
         <h1>Connexion</h1>
+        <?php
+            if (isset($_GET['erreur'])) {
+                echo '<p class="error-message">' . htmlspecialchars($_GET['erreur']) . '</p>';
+            }
+        ?>
         <form action="connexion_traitement.php" method="post" class="form-connexion">
 
             <label for="email">Adresse e-mail</label>
