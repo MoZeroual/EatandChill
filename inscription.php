@@ -28,9 +28,20 @@
 <main>
     <div class="container">
         <h1>Inscription</h1>
+         <?php
+            if (isset($_GET['erreur'])) {
+                echo '<p class="error-message">' . htmlspecialchars($_GET['erreur']) . '</p>';
+            }
+            ?>
         <form action="inscription_traitement.php" method="post" class="form-inscription">
 
 
+            <label for="civilite">Civilité</label>
+                <select id="civilite" name="civilite" required>
+                    <option value="">-- Sélectionnez --</option>
+                    <option value="Homme">Homme</option>
+                    <option value="Femme">Femme</option>
+                </select>
             <label for="nomComplet">Nom complet</label>
             <input type="text" id="nomComplet" name="nomComplet" placeholder="Mohammed ZEROUAL" required />
 
