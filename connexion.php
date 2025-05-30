@@ -1,28 +1,8 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Connexion - Recettes</title>
-    <link rel="stylesheet" href="style.css" />
-</head>
-<body>
+<?php
+$showAccueil = false;  // Ne PAS afficher la section d’accueil sur cette page
+include "header.php";
+?>
 
-<header>
-    <nav class="navbar">
-        <div class="logo">Eat and Chill</div>
-        <form class="search-form" action="recherche.php" method="get">
-            <input type="search" name="q" placeholder="Rechercher..." required />
-            <button type="submit">🔍</button>
-        </form>
-        <ul class="nav-links">
-            <li><a href="index.php">Accueil</a></li>
-            <li><a href="contact.php">Contact</a></li>
-            <li><a href="connexion.php">Connexion</a></li>
-            <li><a href="inscription.php">Inscription</a></li>
-        </ul>
-    </nav>
-</header>
 
 <main>
     <div class="container">
@@ -51,18 +31,14 @@
             <p class="already-registered">
                 Pas encore inscrit ? <a href="inscription.php">Créez un compte ici</a>.
             </p>
-
+            <p class="already-registered">
+                <a href="forgot.php">Mot de passe oublié ? </a>
+            </p>
         </form>
     </div>
 </main>
 
-<footer>
-    <div class="footer-content">
-        <p>&copy; 2025 Eat and Chill. Tous droits réservés.</p>
-        <p>Contact : contact@eatandchill.com | Téléphone : 06 12 34 56 78</p>
-        <p>Adresse : 09 rue d'austerlitz, Paris, France</p>
-    </div>
-</footer>
+
 
 <script>
   const togglePassword = document.querySelector('#togglePassword');
@@ -75,5 +51,6 @@
   });
 </script>
 
-</body>
-</html>
+<?php
+include ("footer.php");
+?>

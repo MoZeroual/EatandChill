@@ -1,5 +1,4 @@
 
-// fichier de connexion a la base de donnee
 
 <?php
 // config.php
@@ -14,7 +13,7 @@ try {
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
     // message succes si le connexion est etablie
-    echo "<h2 style='color: green;'>✅ Connexion réussie à la base de données !</h2>";
+    //echo "<h2 style='color: green;'>✅ Connexion réussie à la base de données !</h2>";
 } catch (PDOException $e) {
     // Si une erreur se produit, on l'affiche
     echo "<h2 style='color: red;'>❌ Erreur de connexion : " . $e->getMessage() . "</h2>";

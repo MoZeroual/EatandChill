@@ -1,0 +1,471 @@
+/*@charset "utf-8";*/
+
+/* https://www.fontsquirrel.com */
+
+table {
+border: medium solid #6495ed;
+border-collapse: collapse;
+width: 50%;
+}
+th {
+font-family: monospace;
+border: thin solid #6495ed;
+width: 50%;
+padding: 5px;
+background-color: #D0E3FA;
+background-image: url(sky.jpg);
+}
+td {
+font-family: sans-serif;
+border: thin solid #6495ed;
+width: 50%;
+padding: 5px;
+text-align: center;
+background-color: #ffffff;
+}
+
+.description{
+    border:1px solid blue;
+}
+.social{
+    position:relative;
+    background-color: black;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    border-radius:50%;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+}
+
+textarea{
+    width:500px;
+    height: 200px;
+}
+form{
+    padding-left: 30%;
+}
+input{
+    width: 350px;
+}
+
+
+label {
+    color: blue;
+    /* Colorer en bleu tous les labels (bah oui, pourquoi pas en bleu ?) */
+    display: block;
+    width: 150px;
+    float: left;
+}
+
+legend
+
+/* On met un peu plus en valeur les titres des fieldset */
+    {
+    font-family: 'Lobster', cursive;
+    color: darkgreen;
+    font-weight: bold;
+}
+
+fieldset {
+    margin-bottom: 15px;
+    /* Une marge pour séparer les fieldset #5dd4c6*/
+    background-color: #bad6e3;
+    border-color: blue;
+    border-style: inset;
+    margin-top: 15px;
+    width: 50%;
+}
+
+.slogan {
+    display: inline-block;
+    width: auto;
+    margin-left: 20%;
+    margin-top: 6%;
+    text-shadow: 5px 5px 20px;
+    color: green;
+    text-decoration: none;
+
+}
+header{
+    background-color:#BAD6E3;
+}
+header img {
+    padding: 10px;
+    float: right;
+    width: 10%;
+    -webkit-animation: rotation 4s;
+    -webkit-animation-count:1;
+	animation: rotation 4s;
+	animation-iteration-count: 1;
+	-moz-animation:rotation 4s;
+	-moz-animation-iteration-count: 1;
+}
+
+
+@-webkit-keyframes rotation {
+    from {
+        -webkit-transform: rotate(0deg);
+    }
+
+    to {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+
+.contener_slideshow {
+    width: 610px;
+    height: 311px;
+    overflow: hidden;
+    position: relative;
+}
+
+.slid_1,
+.slid_2,
+.slid_3,
+.slid_4 {
+    position: absolute;
+    width: 610px;
+    height: 311px;
+}
+
+.slid_1 {
+    bottom: 0;
+}
+
+.slid_2 {
+    bottom: 610px;
+}
+
+.slid_3 {
+    bottom: 1220px;
+}
+
+.slid_4 {
+    bottom: 1830px;
+}
+
+.contener_slide {
+    width: 1830px;
+    height: 311px;
+    bottom: 0px;
+    position: absolute;
+
+    -webkit-animation-duration: 10s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-name: anim_slide;
+
+    -moz-animation-duration: 10s;
+    -moz-animation-iteration-count: infinite;
+    -moz-animation-name: anim_slide;
+
+    -ms-animation-duration: 10s;
+    -ms-animation-iteration-count: infinite;
+    -ms-animation-name: anim_slide;
+
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-name: anim_slide;
+}
+
+@-webkit-keyframes anim_slide {
+    0% {
+        bottom: 0px;
+    }
+
+    22% {
+        bottom: 0px;
+    }
+
+    33% {
+        bottom: -610px;
+    }
+
+    45% {
+        bottom: -610px;
+    }
+
+    66% {
+        bottom: -1220px;
+    }
+
+    75% {
+        bottom: -1220px;
+    }
+
+    85% {
+        bottom: -1830px;
+    }
+
+    95% {
+        bottom: -1830px;
+    }
+}
+
+@-moz-keyframes anim_slide {
+    0% {
+        bottom: 0px;
+    }
+
+    22% {
+        bottom: 0px;
+    }
+
+    33% {
+        bottom: -610px;
+    }
+
+    45% {
+        bottom: -610px;
+    }
+
+    66% {
+        bottom: -1220px;
+    }
+
+    75% {
+        bottom: -1220px;
+    }
+
+    85% {
+        bottom: -1830px;
+    }
+
+    95% {
+        bottom: -1830px;
+    }
+}
+
+@-ms-keyframes anim_slide {
+    0% {
+        bottom: 0px;
+    }
+
+    22% {
+        bottom: 0px;
+    }
+
+    33% {
+        bottom: -610px;
+    }
+
+    45% {
+        bottom: -610px;
+    }
+
+    66% {
+        bottom: -1220px;
+    }
+
+    75% {
+        bottom: -1220px;
+    }
+
+    85% {
+        bottom: -1830px;
+    }
+
+    95% {
+        bottom: -1830px;
+    }
+}
+
+@keyframes anim_slide {
+    0% {
+        bottom: 0px;
+    }
+
+    22% {
+        bottom: 0px;
+    }
+
+    33% {
+        bottom: -610px;
+    }
+
+    45% {
+        bottom: -610px;
+    }
+
+    66% {
+        bottom: -1220px;
+    }
+
+    75% {
+        bottom: -1220px;
+    }
+
+    85% {
+        bottom: -1830px;
+    }
+
+    95% {
+        bottom: -1830px;
+    }
+}
+
+/*Menu horizontal*/
+#menu1 {
+    
+    list-style-type: none;
+    padding-left: 30%;
+    overflow: hidden;
+    background-color: #333;
+    width: 50%;
+}
+
+#menu1 li {
+    float: left;
+    border-right: 1px solid #bbb;
+}
+
+#menu1 li:last-child {
+    border-right: none;
+}
+
+#menu1 li a {
+    display: block;
+    color: #fff;
+    font-family: "Trebuchet MS";
+    text-decoration: none;
+    padding: 14px 16px;
+}
+
+#menu1 li a:hover,
+#menu1 li a:focus,
+#menu1 li a:active {
+    background: #c00 url("../img/fond.png")repeat;
+    -webkit-animation: vibrer 0.7s;
+    animation:vibrer 0.7s;
+    -moz-animation: vibrer 0.7s;
+    border-bottom: 5px solid green;
+}
+footer{
+    padding-top:10%;
+}
+@-webkit-keyframes vibrer {
+
+    10%,
+    90% {
+        transform: translate3d(-1px, 0, 0);
+    }
+
+    20%,
+    80% {
+        transform: translate3d(2px, 0, 0);
+    }
+
+    30%,
+    50%,
+    70% {
+        transform: translate3d(-4px, 0, 0);
+    }
+
+    40%,
+    60% {
+        transform: translate3d(4px, 0, 0);
+    }
+}
+
+
+p {
+    color:black;
+    text-align: justify;
+    /*Google font*/
+    font-family: 'Lobster', cursive;
+    margin-left: 15px;
+}
+
+h1 {
+    color: rgb(1, 101, 126);
+    font-family: 'Lobster', cursive;
+}
+
+body {
+    background-color: white;
+
+}
+
+
+/* propriétés de base du menu */
+nav {
+    width: 100%;
+    display: inline-block;
+    
+
+}
+
+@media screen and (max-width: 750px) {
+
+/*    Transformation en vertical    */
+    
+    #menu1 {
+        width: auto;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        width: 250px;
+        background-color: #333;
+        border-style: solid;
+        border-color: #600;
+        border-width: 1px 1px 0px 1px;
+        border-radius: 10px 7px 10px 7px;
+
+    }
+
+    #menu1 a {
+        display: block;
+        color: #fff;
+        font-family: "Trebuchet MS";
+        text-decoration: none;
+        padding: 8px 16px;
+    }
+
+    #menu1 li {
+        width: 250px;
+        text-align: center;
+        border-bottom: 1px solid #600;
+    }
+
+    nav {
+        padding-bottom: 100px;
+        padding-left: 10%;
+
+    }
+
+    .tem {
+        width: 80%;
+    }
+
+    header img {
+        padding: 10px;
+        float: right;
+        width: 40%;
+    }
+
+    .contener_slideshow {
+
+        padding-top: 20%;
+    }
+    textarea{
+        width:auto;
+        height: auto;
+    }
+    input[type=submit] {
+        width: 55%;
+        padding: 10px;
+    }
+    .formulaire{
+        padding-left: 5%;
+    }
+
+}
+
+
+
+
+
+
+
