@@ -12,7 +12,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $ville = trim($_POST['ville']);
     $date_resa = $_POST['date'];
     $heure_resa = $_POST['heure'];
-
+    $pactuels = $participants_avec_moi+1;
 
     if ($participants < 1 || $participants > 10) {
         echo "Erreur : nombre de participants invalide.";
@@ -20,20 +20,36 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     }
 
     // Préparer et exécuter la requête d'insertion
-    $sql = "INSERT INTO reservations (participants,pseudo, restaurant, ville,date_resa, heure_resa) VALUES (:participants,:pseudo, :restaurant, :ville, :date_resa, :heure_resa)";
+    $sql = "INSERT INTO reservations (participants, paarticipantsavecmoi, participantsactuel,pseudo, restaurant, ville,date_resa, heure_resa) VALUES (:participants, :pavecmoi, :pactuel,:pseudo, :restaurant, :ville, :date_resa, :heure_resa)";
     $stmt = $pdo->prepare($sql);
     $stmt->execute([
         ':participants' => $participants,
+        ':pavecmoi' => $participants_avec_moi,
+        ':pactuel' =>  $pactuels,
         ':pseudo' => $pseudo,
         ':restaurant' => htmlspecialchars($restaurant),
         ':ville' => htmlspecialchars($ville),
         ':date_resa' => $date_resa,
         ':heure_resa' => $heure_resa
     ]);
+    
+    //insertion dans la table rencontre
+    $reservation_id = $pdo->lastInsertId();
+    $user_id = $_SESSION['user_id'];
+    $sql_rencontre = "INSERT INTO rencontres (idr, idu) VALUES (:idr, :idu)";
+    $stmt_rencontre = $pdo->prepare($sql_rencontre);
+    $stmt_rencontre->execute([
+    ':idr' => $reservation_id,
+    ':idu' => $user_id
+]);
+
+
+    
 
     echo "<h2>Organisation enregistrée avec succès !</h2>";
     echo "<p><strong>Nombre de participants :</strong> $participants</p>";
-    echo "<p><nombre de participants avec moi :</strong> $participants_avec_moi</p>";
+    echo "<p><strong>MIDOU ZEROUAL</strong>";
+    echo "<p><strong>nombre de participants avec moi :</strong> $participants_avec_moi</p>";
     echo "<p><strong>Restaurant :</strong> " . htmlspecialchars($restaurant) . "</p>";
     echo "<p><strong>Ville :</strong> " . htmlspecialchars($ville) . "</p>";
     echo "<p><strong>Date de reservation :</strong> " . $date_resa . "</p>";

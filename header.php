@@ -50,6 +50,9 @@ if (!isset($_SESSION['pseudo']) || empty($_SESSION['pseudo'])) {
                     </li>
                 <?php else: ?>
                     <li class="nav-item">
+                        <a class="nav-link" href="participation.php">Participer</a>
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link" href="mesrestos.php">Mes restos</a>
                     </li>
                     <li class="nav-item">
