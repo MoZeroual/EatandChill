@@ -31,6 +31,9 @@ include 'header.php';
     <label for="participants">Nombre de participants (max 10) :</label>
     <input type="number" id="participants" name="participants" min="2" max="10" required><br/>
 
+    <label for="participantAvecMoi">Nombre de participant avec moi :</label>
+    <input type="text" id="participantAvecMoi" name="participantAvecMoi" required><br/>
+
     <label for="restaurant">Nom du restaurant :</label>
     <input type="text" id="restaurant" name="restaurant" required><br/>
 
