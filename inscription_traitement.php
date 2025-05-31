@@ -20,7 +20,12 @@ try {
     $stmtCheck = $pdo->prepare($sqlCheck);
     $stmtCheck->execute([':email' => $email]);
     if ($stmtCheck->rowCount() > 0) {
-        header("Location: inscription.php?erreur=Email déjà utilisé");
+        // Email déjà utilisé : alerte + redirection vers inscription.php
+        echo "<script>
+                alert(' ⚠️ Erreur : Email déjà utilisé.');
+                window.location.href = 'inscription.php';
+              </script>";
+        exit;
     } else {
     
     // Préparation de la requête
@@ -40,7 +45,11 @@ try {
         
     ]);
 
-    header("Location: connexion.php");
+    echo "<script>
+                alert(' ✅ Inscription réussie ! Vous pouvez maintenant vous connecter.');
+                window.location.href = 'index.php';
+              </script>";
+        exit;
 }
 
 } catch (Exception $e) {
