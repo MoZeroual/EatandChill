@@ -35,6 +35,30 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     echo "<p><strong>Ville :</strong> " . htmlspecialchars($ville) . "</p>";
     echo "<p><strong>Date de reservation :</strong> " . $date_resa . "</p>";
     echo "<p><strong>Confirmation heure de reservation :</strong> " .$heure_resa . "</p>";
+
+    //envoie du mail de prise en compte
+        // Envoi de l'e-mail de confirmation
+        $to = $_SESSION['email']; // Email de l'utilisateur
+        $subject = "Confirmation de votre réservation";
+        $message = "Bonjour $pseudo,\n\n";
+        $message .= "Votre réservation a bien été prise en compte.\n\n";
+        $message .= "Détails de votre réservation :\n";
+        $message .= "- Restaurant : $restaurant\n";
+        $message .= "- Ville : $ville\n";
+        $message .= "- Date : $date_resa\n";
+        $message .= "- Heure : $heure_resa\n";
+        $message .= "- Nombre de participants : $participants\n\n";
+        $message .= "Merci pour votre confiance.\nL'équipe de réservation.";
+
+        $headers = "From: lm_zeroual@esi.dz"; // Remplacez par votre adresse pro
+
+        // Envoi du mail
+        if (mail($to, $subject, $message, $headers)) {
+            echo "<p>Un e-mail de confirmation a été envoyé à <strong>$to</strong>.</p>";
+        } else {
+            echo "<p style='color:red;'>Erreur lors de l'envoi de l'e-mail de confirmation.</p>";
+        }
+
 } else {
     echo "Accès non autorisé.";
 }
