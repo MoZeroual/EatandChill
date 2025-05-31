@@ -54,7 +54,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     echo "<p><strong>Ville :</strong> " . htmlspecialchars($ville) . "</p>";
     echo "<p><strong>Date de reservation :</strong> " . $date_resa . "</p>";
     echo "<p><strong>Confirmation heure de reservation :</strong> " .$heure_resa . "</p>";
-    if($participants_avec_moi>1)
+    if($participants_avec_moi>=1)
     {
         //envoie du mail de validation
         $to = $_SESSION['email']; 

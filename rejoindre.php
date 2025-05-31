@@ -72,21 +72,34 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         $message = "";
         $headers = "From: lm_zeroual@esi.dz\r\n";
 
-        if ($participantsactuel = 2 && $participantsactuel < $participantsmax) {
+        if ($participantsactuel == 2 && $participantsactuel < $participantsmax) {
             // Envoi mail validation réservation
+            echo "il ya maitenant deux paticipant donc la reservation est validé voici le mail";
+            echo $emailCreateur ;
             $subject = "Votre réservation est validée";
             $message = "Bonjour $pseudoCreateur,\n\n";
             $message .= "Votre réservation au restaurant " . $reservation['restaurant'] . " est maintenant validée car elle compte $participantsactuel participants.\n\n";
             $message .= "Merci pour votre confiance.\nL'équipe de réservation.";
-            mail($emailCreateur, $subject, $message, $headers);
+            if (mail($emailCreateur, $subject, $message, $headers)) {
+            echo "<p>Un e-mail de confirmation a été envoyé à <strong>$emailCreateur</strong>.</p>";
+        } else {
+            echo "<p style='color:red;'>Erreur lors de l'envoi de l'e-mail de confirmation.</p>";
+        }
 
         } elseif ($participantsactuel == $participantsmax) {
             // Envoi mail réservation complète
+            echo "il ya maitenant toutes l'equipe";
+            echo $emailCreateur ;
             $subject = "Votre réservation est complète";
             $message = "Bonjour $pseudoCreateur,\n\n";
             $message .= "Votre réservation au restaurant " . $reservation['restaurant'] . " est maintenant complète avec $participantsactuel participants.\n\n";
             $message .= "Merci pour votre confiance.\nL'équipe de réservation.";
-            mail($emailCreateur, $subject, $message, $headers);
+            
+            if (mail($emailCreateur, $subject, $message, $headers)) {
+            echo "<p>Un e-mail de confirmation a été envoyé à <strong>$emailCreateur</strong>.</p>";
+        } else {
+            echo "<p style='color:red;'>Erreur lors de l'envoi de l'e-mail de confirmation.</p>";
+        }
         }
     }
 
